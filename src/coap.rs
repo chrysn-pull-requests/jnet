@@ -307,6 +307,15 @@ where
             number: 0,
         }
     }
+
+    /// Consume the message and return its buffer
+    ///
+    /// This comes in handy when for some lifetime reasons building a message from a &mut buffer is
+    /// inconvenient and the buffer is moved into the message for the time of the CoAP manipulation
+    /// instead.
+    pub fn recover_buffer(self) -> B {
+        self.buffer
+    }
 }
 
 impl<B> Message<B>
