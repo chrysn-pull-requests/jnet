@@ -790,6 +790,12 @@ pub enum Method {
     Put = (0, 3),
     /// DELETE
     Delete = (0, 4),
+    /// FETCH (RFC8132)
+    Fetch = (0, 5),
+    /// PATCH (RFC8132)
+    Patch = (0, 6),
+    /// iPATCH (RFC8132)
+    IPatch = (0, 7),
 }
 );
 
